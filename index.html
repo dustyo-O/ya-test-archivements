@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .archivement-container
+        {
+            font-family: "OpenSans-Regular", Helvetica, Arial, sans-serif;
+        }
+        .archivement
+        {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            z-index: 2;
+            display: inline-block;
+        }
+
+        .archivement .inner
+        {
+            z-index: 2;
+            background-color: #f3f8fa;
+            border-radius: 50%;
+            border: solid 4px #89b8cf;
+            box-sizing: border-box;
+            height: 100px;
+            width: 100px;
+            position: relative;
+        }
+        .archivement[class*=" level-"] .inner, .archivement .inner[data-level]
+        {
+            position: relative;
+            height: 98px;
+            width: 98px;
+            margin-bottom: 2px;
+            margin-right: 2px;
+            z-index: 2;
+            border-radius: 50%;
+            background-color: #f3f8fa;
+            box-sizing: border-box;
+        }
+
+        .archivement.level-2 .inner
+        {
+            border: solid 4px #b09eb7;
+            background-color: #f7f5f8;
+        }
+
+
+        .archivement.with-badge .inner:after
+        {
+            content: " ";
+
+            border-radius: 50%;
+            position: absolute;
+            display: block;
+            box-sizing: border-box;
+            width: 32px;
+            height: 32px;
+            left: 60px;
+            top: 60px;
+            z-index: 10;
+            background-color: #f3f8fa;
+        }
+
+        .archivement.with-badge.level-2 .inner:after, .archivement.with-badge .inner[data-level]:after
+        {
+            font-family: "Arial Condensed", sans-serif;
+            font-weight: 700;
+            padding-left: 12px;
+            padding-top: 7px;
+            content: "2";
+            background-color: #f3f8fa;
+            color: #89b8cf;
+        }
+
+        .archivement.with-badge.level-2 .inner:after
+        {
+            color: #b09eb7;
+            background-color: #f7f5f8;
+
+        }
+
+        .archivement.with-badge .inner[data-level]:after
+        {
+            content: attr(data-level);
+        }
+
+
+        .archivement.with-badge:before
+        {
+            content: " ";
+            box-sizing: border-box;
+            position: absolute;
+            border: solid 4px #89b8cf;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            z-index: 1;
+            left: 60px;
+            top: 60px;
+        }
+
+        .archivement.with-badge.level-2:before
+        {
+            border-color: #b09eb7;
+        }
+
+        .archivement img
+        {
+            width: 100%;
+            height: 100%;
+        }
+
+        .archivement-container
+        {
+            position: relative;
+            background: white;
+        }
+
+        .see-more
+        {
+            position:relative;
+            display: none;
+        }
+
+        .archivement-container .see-more
+        {
+            text-align: center;
+        }
+
+        .archivement-container:hover .see-more
+        {
+            z-index: -1;
+        }
+
+        .archivement:nth-child(10) ~ .archivement
+        {
+            display: none;
+        }
+
+        .archivement-container:hover .archivement:nth-child(10) ~ .archivement
+        {
+            display: inline-block;
+        }
+
+        .archivement:nth-last-child(n+10) ~ .see-more{
+            display: block;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="archivement-container">
+    <h1>Достижения</h1>
+    <div class="archivement">
+        <div class="inner">
+            <img src="owl-blue.png">
+        </div>
+    </div>
+    <div class="archivement with-badge level-2">
+        <div class="inner">
+            <img src="owl-pink.png">
+        </div>
+    </div>
+
+    <div class="archivement with-badge">
+        <div class="inner" data-level="9">
+            <img src="owl-blue.png">
+        </div>
+    </div>
+    <div class="archivement">
+        <div class="inner">
+            <img src="owl-blue.png">
+        </div>
+    </div>
+    <div class="archivement with-badge level-2">
+        <div class="inner">
+            <img src="owl-pink.png">
+        </div>
+    </div>
+
+    <div class="archivement with-badge">
+        <div class="inner" data-level="9">
+            <img src="owl-blue.png">
+        </div>
+    </div>
+    <div class="archivement">
+        <div class="inner">
+            <img src="owl-blue.png">
+        </div>
+    </div>
+    <div class="archivement with-badge level-2">
+        <div class="inner">
+            <img src="owl-pink.png">
+        </div>
+    </div>
+
+    <div class="archivement with-badge">
+        <div class="inner" data-level="9">
+            <img src="owl-blue.png">
+        </div>
+    </div>
+    <div class="archivement">
+        <div class="inner">
+            <img src="owl-blue.png">
+        </div>
+    </div>
+    <div class="archivement with-badge level-2">
+        <div class="inner">
+            <img src="owl-pink.png">
+        </div>
+    </div>
+
+    <div class="archivement with-badge">
+        <div class="inner" data-level="9">
+            <img src="owl-blue.png">
+        </div>
+    </div>
+    <div class="archivement">
+        <div class="inner">
+            <img src="owl-blue.png">
+        </div>
+    </div>
+    <div class="archivement with-badge level-2">
+        <div class="inner">
+            <img src="owl-pink.png">
+        </div>
+    </div>
+
+    <div class="archivement with-badge">
+        <div class="inner" data-level="9">
+            <img src="owl-blue.png">
+        </div>
+    </div>
+    <div class="archivement">
+        <div class="inner">
+            <img src="owl-blue.png">
+        </div>
+    </div>
+    <div class="archivement with-badge level-2">
+        <div class="inner">
+            <img src="owl-pink.png">
+        </div>
+    </div>
+
+    <div class="archivement with-badge">
+        <div class="inner" data-level="9">
+            <img src="owl-blue.png">
+        </div>
+    </div>
+    <div class="see-more">
+        Смотреть еще
+    </div>
+</div>
+</body>
+</html>
